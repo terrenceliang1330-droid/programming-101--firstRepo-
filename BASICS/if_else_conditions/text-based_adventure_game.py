@@ -12,9 +12,32 @@ if leftOrRight == "left":
         if headOrLegs == "head":
             print("You aim for the beast's head and strike with all your might. The beast howls in pain and falls to the ground, defeated. You have won the battle and continue on your quest for the Sword of Destiny!")
 
+            keyOrBread = input("Suddenly, a door opens beneath you. You fall through a fortress of structures and land in a room. Inside are two items: a key and a piece of bread. Do you take the key or the bread?").lower()
+
+            if keyOrBread == "key":
+                print("You take the key and use it to open a door. Looking inside, someone pushes you and you fall into a pit of spikes. You should of known that life isn't that easy. Pathetic.")
+
+            elif keyOrBread == "bread":
+                print("You take the bread, but you aren't hungry.")
+                EatOrPocket = input("Do you eat the bread or put it in your pocket?").lower()
+
+                if EatOrPocket == "eat":
+                    print("You eat the bread and die. It was poisoned. You weren't even hungry. Pathetic.")
+
+                elif EatOrPocket == "pocket":
+                    print("You put the bread in your pocket and continue on your quest. You don't trust any of the items in the room. You slice the room open with your sword and find the Sword of Destiny hidden inside. You awaken the power of the sword and fly out, becoming the greatest knight in history. Horray!")
+
+                else:
+                    print("Hmm? Think again. You get crushed by the falling ceiling in the process of indecision. Pathetic.")
+
+            else:
+                print("Hmm? Think again. You die in the process of indecision.")
 
         elif headOrLegs == "legs":
             print("You slice the beast's legs off, but something goes wrong. The beast regenates its legs. You didn't know that it could regerate. You die in the hands of the beast due to lack of knowledge. Pathetic.")
+
+        else:
+            print("Hmm? Think again. You die in the process of indecision.")
 
 
     elif fightOrRun == "run": 
@@ -23,6 +46,7 @@ if leftOrRight == "left":
 
     else:
         print("Hmm? Think again. You die in the process of indecision.")
+
 
 
 
