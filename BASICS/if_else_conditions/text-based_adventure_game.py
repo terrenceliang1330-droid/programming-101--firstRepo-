@@ -11,6 +11,8 @@ if leftOrRight == "left":
         
         if headOrLegs == "head":
             print("You aim for the beast's head and strike with all your might. The beast howls in pain and falls to the ground, defeated. You have won the battle and continue on your quest for the Sword of Destiny!")
+
+
         elif headOrLegs == "legs":
             print("You slice the beast's legs off, but something goes wrong. The beast regenates its legs. You didn't know that it could regerate. You die in the hands of the beast due to lack of knowledge. Pathetic.")
 
@@ -21,3 +23,6 @@ if leftOrRight == "left":
 
     else:
         print("Hmm? Think again. You die in the process of indecision.")
+
+
+
