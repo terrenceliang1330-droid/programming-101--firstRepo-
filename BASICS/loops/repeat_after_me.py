@@ -27,17 +27,17 @@ while True:
             print(color)
             time.sleep(0.5)
 
-            os.system('cls' if os.name == 'nt' else 'clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
 
-            print("Now repeat the pattern back to me!")
+        print("Now repeat the pattern back to me!")
 
-            for correct_colour in sequence:
-                player_guess = input("Enter the colour: ").strip().lower()
+        for correct_colour in sequence:
+            player_guess = input("Enter the colour: ").strip().lower()
 
-                if player_guess != correct_colour:
-                    print("Wrong colour! Game over.")
-                    game_over = True
-                    break
+            if player_guess != correct_colour:
+                print("Wrong colour! Game over.")
+                game_over = True
+                break
 
         if not game_over:
             print("Correct! Get ready for the next round.")
