@@ -17,7 +17,7 @@ print ("WELCOME TO THE BESTIARY!")
 print(f"Discovered monsters: {', '.join(bestiary.keys())}")
 
 while True:
-    monster_search = input("Which monster would you like to learn about? Type 'quit' to exit. Type 'list monsters' to see all monsters.").lower()
+    monster_search = input("Which monster would you like to learn about? Type 'quit' to exit. Type 'list monsters' to see all monsters. Type 'add monster' to add a new monster.").lower()
 
     if monster_search == "quit":
         print("Closing bestiary.")
