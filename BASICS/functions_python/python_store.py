@@ -22,7 +22,7 @@ def buy_item(item):
     money += cost
     stock[item] -= 1
 
-    print(f"You bought a {item} for {cost} coins. You now have {money} coins and there are {stock[item]} {item}s left in stock.")
+    print(f"A {item} was bought for {cost} coins. You now have {money} coins and there are {stock[item]} {item}s left in stock.")
 
 print("Welcome to the store!")
 
