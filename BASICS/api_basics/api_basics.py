@@ -14,12 +14,18 @@ def pokemon_data():
     attack = data["stats"][1]["base_stat"]
     defense = data["stats"][2]["base_stat"]
 
+    return poke_name, poke_id, hp, attack, defense
+
+
+
+
+poke_name, poke_id, hp, attack, defense = pokemon_data()
+
 
 
 pygame.init()
 
 screen = pygame.display.set_mode((700, 500))
-
 pygame.display.set_caption("Pokemon Stats")
 
 font = pygame.font.SysFont("arial", 30)
@@ -28,18 +34,19 @@ running = True
 
 while running:
 
-    text = font.render('Hi Game', True, (255, 255, 255))
+    title_text = font.render(f"{poke_name} (ID: {poke_id})", True, (255, 255, 255))
+    hp_text = font.render(f"HP: {hp}", True, (255, 255, 255))
+    attack_text = font.render(f"Attack: {attack}", True, (255, 255, 255))
+    defense_text = font.render(f"Defense: {defense}", True, (255, 255, 255))
+    
+    screen.blit(title_text, (100, 80))
+    screen.blit(hp_text, (100, 160)) 
+    screen.blit(attack_text, (100, 220))
+    screen.blit(defense_text, (100, 280))
 
-    text_rect = text.get_rect()
-    text_rect.center = (700 //2, 500 //2)
-
-    screen.blit(text, text_rect)
 
     for event in pygame.event.get():
-
         if event.type == pygame.QUIT:
             running = False
-    
     pygame.display.flip()
-
 pygame.quit()
